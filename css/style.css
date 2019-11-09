@@ -1,0 +1,163 @@
+/*
+Mark Ramirez
+SI 539
+Portfolio CSS
+10 November 2019
+*/
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    background-image: url("../images/columns.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.container{
+  grid-template-columns: repeat(3, 1fr);
+  grip-row-gap: 15px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+nav ul{
+ list-style-type: none;
+}
+
+nav li{
+ display: inline-block;
+ padding-right: 20px;
+}
+
+nav a{
+ color: white;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+nav a:hover{
+ text-decoration: underline;
+}
+
+.nav{
+  text-align: center;
+  align-self: center;
+  grid-column: 1/-1;
+  grid-row: 1;
+ }
+
+.bio-image{
+  max-width: 25%;
+  max-height: 25%;
+  grid-column: 2;
+  grid-row: 4/6;
+  overflow: hidden;
+}
+
+.experience-image{
+  max-width: 25%;
+  max-height: 25%;
+  grid-column: 1;
+  grid-row: 4/6;
+  overflow: hidden;
+}
+
+.education-image{
+  max-width: 25%;
+  max-height: 25%;
+  grid-column: 3;
+  grid-row: 4/6;
+  overflow: hidden;
+}
+
+.skills-image{
+  max-width: 25%;
+  max-height: 25%;
+  grid-column: 1;
+  grid-row: 6/8;
+  overflow: hidden;
+}
+
+.gallery-image{
+  max-width: 25%;
+  max-height: 25%;
+  grid-column: 3;
+  grid-row: 6/8;
+  overflow: hidden;
+}
+
+.contact-image{
+  max-width: 25%;
+  max-height: 25%;
+}
+
+/* @media screen and (max-width: 800px) {
+
+  .container{
+    display: flex;
+    flex-direction: row;
+   }
+
+  .nav{
+  }
+
+  .bio-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .experience-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .education-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .skills-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .gallery-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .contact-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: default;
+    transition: default;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+} */
