@@ -6,6 +6,16 @@ Portfolio CSS
 */
 
 /* GENERAL */
+  html{
+    font-family: "Goudy Old Style";
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    background-image: url("../images/columns.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+
   .nav{
     text-align: center;
     align-self: center;
@@ -24,6 +34,7 @@ Portfolio CSS
     grid-row-start: 2;
     grid-row-end: 3;
     padding-bottom: 50px;
+    font-size: 64px;
   }
 
   nav ul{
@@ -45,16 +56,42 @@ Portfolio CSS
   text-decoration: underline;
   }
 
+  .title{
+    text-align: left;
+    /* align-self: center; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-left: 25px;
+    font-size: 32px;
+  }
+
+  .text-block{
+     /*Your code here */
+    align-self: center;
+    justify-self: center;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid #8a5607;
+    color: black;
+    padding: 30px;
+  }
+
   footer{
     background-color: black;
     text-align: center;
     align-self: center;
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 9;
+    grid-row-start: 6;
+    grid-row-end: -1;
   }
 /* END GENERAL */
+
+/* EXPERIENCE PAGE */
+
+
+/* END EXPERIENCE PAGE */
 
 /* HOMEPAGE */
   img {
@@ -67,27 +104,38 @@ Portfolio CSS
     -webkit-filter:blur(0px);
   }
 
-  img:hover{
+  /* .index-image img:hover{
     -webkit-filter:blur(5px);
+  } */
+
+  .intro{
+    text-align: center;
+    /* align-self: center; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-left: 25px;
+    font-size: 32px;
   }
 
-  .bio-image img{
+  /* .bio-image img{
     -webkit-filter:blur(0px);
-  }
+  } */
 
-  html{
+  /* html{
       scroll-behavior: smooth;
       background-attachment: fixed;
       background-image: url("../images/columns.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       color: white;
-  }
+  } */
 
   .home-container{
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 50% 50% 50% 50% 50% 50% 50% 50%;
+    grid-template-rows: 50% 50% 50% 50% 50% 50%;
     grip-row-gap: 15px;
     height: auto;
     width: auto;
@@ -106,7 +154,7 @@ Portfolio CSS
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
-    grid-row-end: 6;
+    grid-row-end: 5;
     align-self: center;
     padding: 10%;
   }
@@ -118,8 +166,8 @@ Portfolio CSS
     width: 75%;
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
     /* justify-items: stretch; */
     /* overflow: hidden; */
     /* align-self: center; */
@@ -131,62 +179,57 @@ Portfolio CSS
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
-    grid-row-end: 6;
+    grid-row-end: 5;
     justify-items: center;
     overflow: hidden;
     transform: rotate(360deg);
     padding-left: 10px;
   }
 
-  .experience-link{
+  /* .experience-link{
     position: absolute;
     text-align: center;
-    -webkit-transition: opacity 0.6s;
-    -moz-transition: opacity 0.6s;
-    transition: opacity 0.6s;
-    vertical-align:middle;
-    /* position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FFFF00;
     color: black;
-    text-align:center; */
-  }
+    text-align:center;
+  } */
 
-  .education-image img{
+  .education img{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 4;
+    grid-row-end: 5;
+    justify-items: stretch;
+    overflow: hidden;
+    /* transform: rotate(90deg); */
+    padding-right: 10px;
+  }
+
+  /* .education-link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFF00;
+    color: black;
+    text-align: center;
+  } */
+
+  .skills img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
     grid-row-end: 6;
     justify-items: stretch;
     overflow: hidden;
-    transform: rotate(90deg);
-    padding-right: 10px;
-  }
-
-  .education-link{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    background-color: #FFFF00;
-    color: black;
-    text-align: center;
-  }
-
-  .skills-image img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 8;
-    justify-items: stretch;
-    overflow: hidden;
     transform: rotate(360deg);
-    padding-left: 10px;
   }
 
-  .skills-link{
+  /* .skills-link{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -194,20 +237,19 @@ Portfolio CSS
     background-color: #FFFF00;
     color: black;
     text-align: center;
-  }
+  } */
 
-  .gallery-image img{
+  .rotunda img{
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
     justify-items: stretch;
     overflow: hidden;
     transform: rotate(360deg);
-    padding-right: 10px;
   }
 
-  .gallery-link{
+  /* .gallery-link{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -215,11 +257,257 @@ Portfolio CSS
     background-color: #FFFF00;
     color: black;
     text-align: center;
+  } */
+
+  .link{
+    background-color: #8a5607;
+    color: white;
+    text-align: center;
+    margin-left: 25px;
   }
+
+  .a{
+    color: white;
+  }
+
 /* END HOMEPAGE */
 
 /* EXPERIENCE PAGE */
 
+  .experience-container{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50% 50% 50% 50% 50% 50%;
+    grip-row-gap: 15px;
+    height: auto;
+    width: auto;
+  }
+
+  .natural-history-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .natural-history{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .national-gallery-image{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .national-gallery{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .anthro-nagpra-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .anthro-nagpra{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+
+/* END EXPERIENCE */
+
+/* EDUCATION PAGE */
+
+  .education-container{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50% 50% 50% 50% 50% 50%;
+    grip-row-gap: 15px;
+    height: auto;
+    width: auto;
+  }
+
+  .umsi-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .umsi{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .lsa-image{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .lsa{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .oxford-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 50px 0px 25px 0px;
+  }
+
+  .oxford{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+
+/* END EDUCATION */
+
+/* SKILLS PAGE */
+  .skills-container{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50% 50% 50% 50% 50% 50% 50%;
+    grip-row-gap: 15px;
+    height: auto;
+    width: auto;
+  }
+
+  .description{
+    text-align: left;
+    /* align-self: center; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding: 25px 0px 25px 25px;
+    font-size: 16px;
+  }
+
+  .soft-skills-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .soft-skills{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .hard-skills-image{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 25px 0px 25px 0px;
+  }
+
+  .hard-skills{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+
+  .languages-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    justify-items: stretch;
+    overflow: hidden;
+    max-height: 700px;
+    z-index: -1;
+    padding: 50px 0px 25px 0px;
+  }
+
+  .languages{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+/* END SKILLS */
+
+/* GALLERY */
+  .gallery{
+    margin-left: 40%;
+    float: center;
+    width: 180px;
+    padding: 45px;
+    align-items: center;
+  }
+
+  .gallery img:hover{
+    transition: transform .2s;
+    transform: scale(3.5);
+    z-index: 2;
+  }
+
+/* END GALLERY */
 
 /* @media screen and (max-width: 800px) {
 
