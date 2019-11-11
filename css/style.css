@@ -19,11 +19,11 @@ Portfolio CSS
 
   .skip a{
     background: #555555;
+    color:  #e6a522;
     left: 0;
     padding: 6px;
     top: -40px;
     -webkit-transition: top 1s ease-out;
-    -moz-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
   }
@@ -172,8 +172,6 @@ Portfolio CSS
   }
 
   .home-container{
-    -moz-display: grid;
-    -ms-display: grid;
     -webkit-display: grid;
     display: grid;
     position: relative;
@@ -289,7 +287,6 @@ Portfolio CSS
 
 /* EXPERIENCE PAGE */
   .experience-container{
-    -moz-display: grid;
     -ms-display: grid;
     -webkit-display: grid;
     display: grid;
@@ -303,7 +300,6 @@ Portfolio CSS
 
 /* EDUCATION PAGE */
   .education-container{
-    -moz-display: grid;
     -ms-display: grid;
     -webkit-display: grid;
     display: grid;
@@ -317,7 +313,6 @@ Portfolio CSS
 
 /* SKILLS PAGE */
   .skills-container{
-    -moz-display: grid;
     -ms-display: grid;
     -webkit-display: grid;
     display: grid;
@@ -353,7 +348,6 @@ Portfolio CSS
 
 /* GALLERY */
   .gallery-container{
-    -moz-display: grid;
     -ms-display: grid;
     -webkit-display: grid;
     display: grid;
@@ -402,7 +396,6 @@ Portfolio CSS
   }
 
   .home-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -411,7 +404,6 @@ Portfolio CSS
    }
 
   .experience-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -420,7 +412,6 @@ Portfolio CSS
   }
 
   .education-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -429,7 +420,6 @@ Portfolio CSS
    }
 
   .skills-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -438,7 +428,6 @@ Portfolio CSS
   }
 
   .gallery-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -469,7 +458,6 @@ Portfolio CSS
   }
 
   .home-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -493,7 +481,6 @@ Portfolio CSS
   }
 
   .experience-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -502,7 +489,6 @@ Portfolio CSS
   }
 
   .education-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -511,7 +497,6 @@ Portfolio CSS
   }
 
   .skills-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -523,7 +508,6 @@ Portfolio CSS
   }
 
   .gallery-container{
-    -moz-display: flex;
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
