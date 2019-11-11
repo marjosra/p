@@ -7,7 +7,7 @@ Portfolio CSS
 
 /* GENERAL */
   html{
-    font-family: "Goudy Old Style", "Sorts Mill Goudy";
+    font-family: "Goudy Old Style", "Sorts Mill Goudy", "Arial";
     scroll-behavior: smooth;
     position: absolute;
     background-attachment: fixed;
@@ -60,6 +60,10 @@ Portfolio CSS
     grid-row-end: 3;
     padding-bottom: 50px;
     font-size: 64px;
+    letter-spacing: .05em;
+    text-shadow:
+      4px 4px 0px #555555,
+      7px 7px 0px rgba(0, 0, 0, 0.2);
   }
 
   nav ul{
@@ -156,13 +160,10 @@ Portfolio CSS
     border-style: solid;
     border-width: 10px;
     border-color: #e6a522;
-    transition:all 1s ease;
-    -webkit-filter:blur(0px);
   }
 
   .intro{
     text-align: center;
-    /* align-self: center; */
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -324,11 +325,25 @@ Portfolio CSS
     padding-bottom: 10px;
   }
 
+  .skills-image{
+    z-index: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    max-width: 100%;
+  }
+
+  .skills-container .text-block{
+    border: solid 10px #e6a522;
+  }
+
   .first-skills{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 6;
+    margin-left: 80px;
   }
 
   .second-skills{
@@ -343,6 +358,7 @@ Portfolio CSS
     grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
+    margin-right: 80px;
   }
 /* END SKILLS */
 
@@ -362,6 +378,12 @@ Portfolio CSS
     padding: 45px;
   }
 
+  .gallery:hover{
+    filter: invert(100%);
+    transition: transform .4s;
+    transform: scale(1.5);
+  }
+
 /* END GALLERY */
 
 /* CONTACT PAGE */
@@ -375,13 +397,37 @@ Portfolio CSS
   }
 
   .contact-container .title, .contact-container .description, .form-container, .phone{
-    text-align: center;
+    text-align: left;
     padding: 44px;
+  }
+
+  .contact-image{
+    z-index: -1;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    padding: 10px;
   }
 
 /* END CONTACT */
 
 @media screen and (min-device-width: 320px) and (max-width: 767px) {
+  nav{
+    text-align: center;
+    display:block;
+    justify-content:center;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  img {
+    max-width: 90%;
+    max-height: 90%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e6a522;
+  }
 
   .title{
     align-items: center;
@@ -435,6 +481,18 @@ Portfolio CSS
     align-items: center;
   }
 
+  .contact-container{
+    -ms-display: flex;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .contact-image{
+    visibility: hidden;
+  }
+
   footer{
     width: 100%;
   }
@@ -442,6 +500,22 @@ Portfolio CSS
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  nav{
+    text-align: center;
+    display:block;
+    justify-content:center;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  img {
+    max-width: 95%;
+    max-height: 95%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e6a522;
+  }
+
   .title{
     align-items: center;
   }
@@ -452,9 +526,6 @@ Portfolio CSS
     background-color: black;
     color: #e6a522;
     border: solid 10px #e6a522;
-  }
-
-  .text-block:hover{
   }
 
   .home-container{
@@ -513,6 +584,18 @@ Portfolio CSS
     display: flex;
     flex-flow: column;
     align-items: center;
+  }
+
+  .contact-container{
+    -ms-display: flex;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .contact-image{
+    visibility: hidden;
   }
 
   footer{
