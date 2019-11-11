@@ -5,6 +5,8 @@ Portfolio CSS
 10 November 2019
 */
 
+/* MUCH OF THIS WORK INSPIRED FROM AND ALTERED HEAVILY FROM THE GRID ASSIGNMENT (HOMEWORK 4) */
+
 /* GENERAL */
   html{
     font-family: "Goudy Old Style", "Sorts Mill Goudy", "Arial";
@@ -18,7 +20,7 @@ Portfolio CSS
   }
 
   .skip a{
-    background: #555555;
+    background: #000;
     color:  #e6a522;
     left: 0;
     padding: 6px;
@@ -44,11 +46,12 @@ Portfolio CSS
     grid-row-start: 1;
     grid-row-end: 2;
     padding: 30px;
+    background-color: #361101;
   }
 
    /* Code found from https://www.youtube.com/watch?v=l9niaFJh8Gs */
    .nav .current{
-     background-color: #555555;
+     background-color: #000;
    }
 
   .site{
@@ -62,8 +65,9 @@ Portfolio CSS
     font-size: 64px;
     letter-spacing: .05em;
     text-shadow:
-      4px 4px 0px #555555,
+      4px 4px 0px #000,
       7px 7px 0px rgba(0, 0, 0, 0.2);
+    background-color: #361101;
   }
 
   nav ul{
@@ -93,6 +97,7 @@ Portfolio CSS
     grid-row-end: 4;
     padding-left: 25px;
     font-size: 32px;
+    background-color: #361101;
   }
 
   .description{
@@ -103,6 +108,7 @@ Portfolio CSS
     grid-row-end: 5;
     padding: 25px 0px 25px 25px;
     font-size: 16px;
+    background-color: #361101;
   }
 
   .text-block{
@@ -151,9 +157,7 @@ Portfolio CSS
     bottom: 0;
     width: 100%;
   }
-/* END GENERAL */
 
-/* HOMEPAGE */
   img {
     max-width: 100%;
     max-height: 100%;
@@ -170,6 +174,7 @@ Portfolio CSS
     grid-row-end: 4;
     padding-left: 25px;
     font-size: 32px;
+    background-color: #361101;
   }
 
   .home-container{
@@ -280,14 +285,12 @@ Portfolio CSS
     color: black;
   }
 
-  .link:visited{
+  .link a:visited{
+    text-decoration: none;
     color: black;
   }
 
-/* END HOMEPAGE */
-
-/* EXPERIENCE PAGE */
-  .experience-container{
+  .container{
     -ms-display: grid;
     -webkit-display: grid;
     display: grid;
@@ -297,22 +300,7 @@ Portfolio CSS
     height: auto;
     width: auto;
   }
-/* END EXPERIENCE */
 
-/* EDUCATION PAGE */
-  .education-container{
-    -ms-display: grid;
-    -webkit-display: grid;
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 50% 50% 50% 50% 50% 50% 50%;
-    grid-row-gap: 15px;
-    height: auto;
-    width: auto;
-  }
-/* END EDUCATION */
-
-/* SKILLS PAGE */
   .skills-container{
     -ms-display: grid;
     -webkit-display: grid;
@@ -360,9 +348,7 @@ Portfolio CSS
     grid-row-end: 6;
     margin-right: 80px;
   }
-/* END SKILLS */
 
-/* GALLERY */
   .gallery-container{
     -ms-display: grid;
     -webkit-display: grid;
@@ -384,21 +370,21 @@ Portfolio CSS
     transform: scale(1.5);
   }
 
-/* END GALLERY */
-
-/* CONTACT PAGE */
   .contact-container{
     width: 100vw;
     padding-bottom: 10px;
+    background-color: #361101;
   }
 
   .contact-container .title{
     text-align: center;
+    background-color: #361101;
   }
 
   .contact-container .title, .contact-container .description, .form-container, .phone{
     text-align: left;
     padding: 44px;
+    background-color: #361101;
   }
 
   .contact-image{
@@ -409,8 +395,6 @@ Portfolio CSS
     width: 300px;
     padding: 10px;
   }
-
-/* END CONTACT */
 
 @media screen and (min-device-width: 320px) and (max-width: 767px) {
   nav{
@@ -449,21 +433,13 @@ Portfolio CSS
     align-items: center;
    }
 
-  .experience-container{
-    -ms-display: flex;
-    -webkit-display: flex;
-    display: flex;
-   flex-flow: column;
-   align-items: center;
-  }
-
-  .education-container{
+  .container{
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
     flex-flow: column;
     align-items: center;
-   }
+  }
 
   .skills-container{
     -ms-display: flex;
@@ -500,6 +476,8 @@ Portfolio CSS
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+  /* Help with how to stack things for tablet view came from https://stackoverflow.com/questions/50615418/have-2-elements-share-same-line-with-flexbox AND https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container */
   nav{
     text-align: center;
     display:block;
@@ -551,15 +529,7 @@ Portfolio CSS
     align-items: center;
   }
 
-  .experience-container{
-    -ms-display: flex;
-    -webkit-display: flex;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-
-  .education-container{
+  .container{
     -ms-display: flex;
     -webkit-display: flex;
     display: flex;
@@ -602,4 +572,29 @@ Portfolio CSS
     width: 100%;
   }
 
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: #000;
+    color:  #e6a522;
+    left: 0;
+    padding: 6px;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+  .skip a:visited{
+    color: #e6a522;
+  }
+
+  .skip a:focus{
+    top: 0px;
+  }
 }
